@@ -8,5 +8,6 @@ namespace Main.Interfaces
 {
     public interface ITrainings
     {
+        void Train(Person Trainee, int time);
     }
 }

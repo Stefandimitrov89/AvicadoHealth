@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    class CardioTraining
+    class CardioTraining : Training
     {
+        public CardioTraining(Person trainee, int time) : base(trainee, time)
+        {
+        }
+
+        public override void Train(Person Trainee, int time)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
