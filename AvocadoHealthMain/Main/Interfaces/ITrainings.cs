@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Main.Interfaces
 {
-    class ITrainings
+    public interface ITrainings
     {
     }
 }

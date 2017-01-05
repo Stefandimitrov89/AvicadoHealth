@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Main.Interfaces
 {
-    class IFoods
+    public interface IFoods
     {
     }
 }
