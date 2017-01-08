@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    public class Trainer : Person
+    public class Trainer :  Interfaces.IPerson
     {
-        public Trainer(string firstName, string lastName) : base(firstName, lastName)
+
+        public Trainer(string firstName, string lastName)
         {
         }
 

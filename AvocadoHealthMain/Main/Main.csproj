@@ -62,7 +62,8 @@
     <Compile Include="Foods\BeerAndOtherGreatThingies.cs" />
     <Compile Include="Foods\BreadAndSimilar.cs" />
     <Compile Include="Menu.cs" />
-    <Compile Include="TrainerMenu.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="TrainerUI.cs" />
     <Compile Include="Trainings\CardioTraining.cs" />
     <Compile Include="Foods\Drinks.cs" />
     <Compile Include="Food.cs" />
@@ -74,7 +75,6 @@
     <Compile Include="Login.cs" />
     <Compile Include="Foods\Meat.cs" />
     <Compile Include="Foods\NonAlcoBevareges.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Trainings\PowerTraining.cs" />
     <Compile Include="ReadWrite.cs" />
     <Compile Include="Startup.cs" />

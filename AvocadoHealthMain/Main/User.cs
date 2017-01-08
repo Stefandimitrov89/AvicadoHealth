@@ -7,7 +7,7 @@ using Main.Interfaces;
 
 namespace Main
 {
-    public class User : Person, IPerson
+    public class User :  IPerson
     {
         public string _Gender { get; private set; }
         public Trainer Trainer { get; set; }
@@ -34,6 +34,11 @@ namespace Main
             this._Calories += (Food.Calories * mass);
             this._Fats += (Food.Fats * mass);
             this._Proteins += (Food.Proteins * mass);
+        }
+
+        internal void SetTraining(Training training)
+        {
+            throw new NotImplementedException();
         }
 
         public override void Train(Training training, double duration)
