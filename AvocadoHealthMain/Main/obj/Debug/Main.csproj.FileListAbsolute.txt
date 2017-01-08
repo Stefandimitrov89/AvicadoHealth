@@ -5,3 +5,5 @@ C:\Users\DesertFox\Desktop\Avocado\AvicadoHealth\AvocadoHealthMain\Main\bin\Debu
 C:\Users\DesertFox\Desktop\Avocado\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.csprojResolveAssemblyReference.cache
 C:\Users\DesertFox\Desktop\Avocado\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.exe
 C:\Users\DesertFox\Desktop\Avocado\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.pdb
+C:\Users\s.dim\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.exe
+C:\Users\s.dim\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.pdb

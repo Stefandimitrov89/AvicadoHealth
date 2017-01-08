@@ -58,30 +58,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BeanRiceAndSimilarStuff.cs" />
-    <Compile Include="BeerAndOtherGreatThingies.cs" />
-    <Compile Include="BreadAndSimilar.cs" />
-    <Compile Include="CardioTraining.cs" />
-    <Compile Include="Drinks.cs" />
+    <Compile Include="Foods\BeanRiceAndSimilarStuff.cs" />
+    <Compile Include="Foods\BeerAndOtherGreatThingies.cs" />
+    <Compile Include="Foods\BreadAndSimilar.cs" />
+    <Compile Include="Trainings\CardioTraining.cs" />
+    <Compile Include="Foods\Drinks.cs" />
     <Compile Include="Food.cs" />
-    <Compile Include="Fruits.cs" />
+    <Compile Include="Foods\Fruits.cs" />
     <Compile Include="Interfaces\IFoods.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
     <Compile Include="Interfaces\ITrainings.cs" />
-    <Compile Include="JunkFood.cs" />
+    <Compile Include="Foods\JunkFood.cs" />
     <Compile Include="Login.cs" />
-    <Compile Include="Meat.cs" />
-    <Compile Include="NonAlcoBevareges.cs" />
+    <Compile Include="Foods\Meat.cs" />
+    <Compile Include="Foods\NonAlcoBevareges.cs" />
     <Compile Include="Person.cs" />
-    <Compile Include="PowerTraining.cs" />
+    <Compile Include="Trainings\PowerTraining.cs" />
     <Compile Include="ReadWrite.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trainer.cs" />
     <Compile Include="Training.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="Vegetables.cs" />
-    <Compile Include="Water.cs" />
+    <Compile Include="Foods\Vegetables.cs" />
+    <Compile Include="Foods\Water.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
