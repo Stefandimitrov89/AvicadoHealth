@@ -8,13 +8,11 @@ namespace Main
 {
     class PowerTraining : Training
     {
-        public PowerTraining(Person trainee, int time) : base(trainee, time)
-        {
-        }
+        public double MuscleMassBuildingPerMinute { get; private set; }
 
-        public override void Train(Person Trainee, int time)
+        public override void Train(User trainee, double duration)
         {
-            throw new NotImplementedException();
+            trainee._MuscleMass += (this.MuscleMassBuildingPerMinute * duration);
         }
     }
 }
