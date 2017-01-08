@@ -61,6 +61,8 @@
     <Compile Include="Foods\BeanRiceAndSimilarStuff.cs" />
     <Compile Include="Foods\BeerAndOtherGreatThingies.cs" />
     <Compile Include="Foods\BreadAndSimilar.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="TrainerMenu.cs" />
     <Compile Include="Trainings\CardioTraining.cs" />
     <Compile Include="Foods\Drinks.cs" />
     <Compile Include="Food.cs" />
