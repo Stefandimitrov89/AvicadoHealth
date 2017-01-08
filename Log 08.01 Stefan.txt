@@ -1,0 +1,6 @@
+Done so far:
+Got rid of Person class, Trainer now inherites User without overriding his methods. He will simply be able to train and eat as well. I hve written as a comment that he maybe would be his trainer, but i will do it later.
+
+Worked the User class, implemented his Eat and Train methods. Training is actually moved in Trainings classes, because different type of trainings do different things. Used virtual methods, a possible subject for later refactoring.
+
+Worked on Trainings classes, added a few properties in the Food class as well

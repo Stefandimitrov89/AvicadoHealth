@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    class Trainer : Person
+    public class Trainer : Person
     {
         public Trainer(string firstName, string lastName) : base(firstName, lastName)
         {
         }
 
-        public override void Eat(object Food, int Quantity)
+        public override void Eat(Food Food, double mass)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Train(Training training, double duration)
         {
             throw new NotImplementedException();
         }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    abstract class Food
+    public abstract class Food
     {
-        abstract public int Calories { get; set; }
+        public int Calories { get; set; }
+        public double Fats { get; private set; }
+        public double Proteins { get; private set; }
     }
 }

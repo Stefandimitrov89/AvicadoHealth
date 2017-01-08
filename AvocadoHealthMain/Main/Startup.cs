@@ -10,6 +10,7 @@ namespace Main
     {
         static void Main()
         {
+            
         }
     }
 }

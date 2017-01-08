@@ -8,7 +8,10 @@ namespace Main.Interfaces
 {
     public interface IPerson
     {
-        void Eat(object Food, int Quantity);
+
+        void Eat(Food Food, double mass);
+
+        void Train(Training training, double duration);
 
     }
 }

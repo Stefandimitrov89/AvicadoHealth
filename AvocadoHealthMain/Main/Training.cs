@@ -7,16 +7,21 @@ using Main.Interfaces;
 
 namespace Main
 {
-    abstract class Training : ITrainings
+    public abstract class Training : ITrainings
     {
-        readonly int _CaloriesPerMinute;
-        public abstract void Train(Person Trainee, int time);
+        public string TrainingName { get; private set; }
 
-        public int CaloriesPerMinute { get; }
+        public double CaloriesUsedPerMinute { get; private set; }
+        public double ProteinsUsedPerMinute { get; private set; }
+        public double FatsUsedPerMinute { get; private set; }
+        public double CarboHydratesUsedPerMinute {get; private set; }
 
-        public Training(Person trainee, int time)
+        public virtual void Train(User trainee, double duration) //unsure about this, not sure if the derived method will hide this implementation. WIll check it soon, Stefan
         {
-
+            trainee._Calories -= (this.CaloriesUsedPerMinute * duration);
+            trainee._Proteins -= (this.ProteinsUsedPerMinute * duration);
+            trainee._Fats -= (this.FatsUsedPerMinute * duration);
+            trainee._CarboHydrates -= (this.CaloriesUsedPerMinute * duration);
         }
     }
 }
