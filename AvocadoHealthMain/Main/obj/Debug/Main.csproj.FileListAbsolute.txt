@@ -7,3 +7,6 @@ C:\Users\DesertFox\Desktop\Avocado\AvicadoHealth\AvocadoHealthMain\Main\obj\Debu
 C:\Users\DesertFox\Desktop\Avocado\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.pdb
 C:\Users\s.dim\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.exe
 C:\Users\s.dim\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.pdb
+C:\Users\mkanovsk\Documents\AvocadoHealth\master\AvocadoHealthMain\Main\bin\Debug\Main.exe.config
+C:\Users\mkanovsk\Documents\AvocadoHealth\master\AvocadoHealthMain\Main\obj\Debug\Main.exe
+C:\Users\mkanovsk\Documents\AvocadoHealth\master\AvocadoHealthMain\Main\obj\Debug\Main.pdb
