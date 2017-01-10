@@ -10,15 +10,19 @@ namespace Main
     {
 
         private Menu trainerMenu;
-        private Trainer loggerTrainer;
+        private Trainer loggedTrainer;
 
         public TrainerUI(Trainer loggedTrainer)
         {
             List<MenuItem> list = new List<MenuItem>();
 
             list.Add(new MenuItem() { Number = 1, MenuText = "Set training" });
-            // todo add other menus
-
+            list.Add(new MenuItem() { Number = 2, MenuText = "Create training" });
+            list.Add(new MenuItem() { Number = 3, MenuText = "Set Food" });
+            list.Add(new MenuItem() { Number = 4, MenuText = "User Info" });
+            list.Add(new MenuItem() { Number = 5, MenuText = "Show Users" });
+            list.Add(new MenuItem() { Number = 6, MenuText = "List Menu" });
+            list.Add(new MenuItem() { Number = 7, MenuText = "Return To Login"});
             trainerMenu = new Menu(list);
         }
 
@@ -27,15 +31,38 @@ namespace Main
             switch (actionNumber)
             {
                 case 1:
-                    var user = ChooseUser(loggerTrainer);
-                    var training = ChooseTraining(loggerTrainer);
+                    var user = ChooseUser(loggedTrainer);
+                    var training = ChooseTraining(loggedTrainer);
 
                     user.SetTraining(training);
 
                     break;
-
+                case 2:
+                    CreateTraining();
+                    break;
                 default: break;
             }
+        }
+
+        private object CreateTraining()
+        {
+
+            //TODO Validation
+            Console.WriteLine("Please enter training name");
+            string trainingName = Console.ReadLine();
+            Console.WriteLine("Please enter calories spend per minute");
+            double CaloriesSpendPerMin = double.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter proteins spend per minute");
+            double ProteinsSpendPerMinute = double.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter fat spend per minute");
+            double FartsSpendPerMinute = double.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter carbonhydrates spend per minute");
+            double CHsSpendPerMinute = double.Parse(Console.ReadLine());
+
+            var NewTraining = new Training(trainingName, CaloriesSpendPerMin, ProteinsSpendPerMinute,FartsSpendPerMinute,CHsSpendPerMinute);
+            return NewTraining;
+
+            //TODO Impelementing new training
         }
 
         private User ChooseUser(Trainer trainer)
@@ -61,5 +88,8 @@ namespace Main
                 this.ExecuteMenuAction(input);
             }
         }
+        
+
+
     }
 }
