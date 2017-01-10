@@ -15,15 +15,19 @@ namespace Main
 
         static void Main()
         {
-            bool isLogged = false;
+            /*bool isLogged = false;
             do
             {
                 isLogged = LogIn();
-            } while (!isLogged);
+            } while (!isLogged);*/
+            Console.WriteLine("Please, enter your username:");
+            Login login = new Login();
+   
+            var loggedUser = login.LogIn();
 
             List<MenuItem> MenuItemList = new List<MenuItem>();
 
-            if (LoggedUser is Trainer)
+            if (loggedUser == typeof(Trainer))
             {
                 var trainerUi = new TrainerUI(LoggedUser as Trainer);
                 trainerUi.MainMenu();   
