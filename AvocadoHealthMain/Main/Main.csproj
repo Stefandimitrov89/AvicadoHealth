@@ -61,6 +61,7 @@
     <Compile Include="Foods\BeanRiceAndSimilarStuff.cs" />
     <Compile Include="Foods\BeerAndOtherGreatThingies.cs" />
     <Compile Include="Foods\BreadAndSimilar.cs" />
+    <Compile Include="Interfaces\ILogIn.cs" />
     <Compile Include="Interfaces\ITrainer.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="MenuItem.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="User.cs" />
     <Compile Include="Foods\Vegetables.cs" />
     <Compile Include="Foods\Water.cs" />
+    <Compile Include="UsernamesAndPasswords.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
