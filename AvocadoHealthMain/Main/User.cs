@@ -42,7 +42,7 @@ namespace Main
         }
 
         // Смених тук да иска интерфейса, а не конкретен клас - Мартин
-        internal void SetTraining(Interfaces.ITrainings training)
+        internal void CreateTraining(Interfaces.ITrainings training)
         {
             throw new NotImplementedException();
         }
@@ -51,5 +51,11 @@ namespace Main
         {
             training.Train(this, duration);
         }
+
+        public void printUserInfo()
+        {
+            Console.WriteLine($"{this._FirstName} {this._LastName} is {this._Gender}. He has {this._Mass} mass index and {this._MuscleMass} muscle mass");
+        }
+        // Svetlomir added this Method because it is needed for TrainerUI
     }
 }

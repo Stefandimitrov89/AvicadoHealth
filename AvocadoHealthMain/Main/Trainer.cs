@@ -59,7 +59,7 @@ namespace Main
         //Даден Trainer задава тренировка на даден User от листа му.
         public void SetTraining(User user, Interfaces.ITrainings training)
         {
-            user.SetTraining(training);
+            user.CreateTraining(training);
         }
 
         //Създаване на тренировка от Trainer

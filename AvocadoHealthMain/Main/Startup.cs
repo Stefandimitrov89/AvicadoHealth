@@ -20,9 +20,15 @@ namespace Main
             {
                 isLogged = LogIn();
             } while (!isLogged);*/
+            Login();
+
+        }
+
+        public static void Login()
+        {
             Console.WriteLine("Please, enter your username:");
             Login login = new Login();
-   
+
             var loggedUser = login.LogIn();
 
             List<MenuItem> MenuItemList = new List<MenuItem>();
@@ -30,7 +36,7 @@ namespace Main
             if (loggedUser == typeof(Trainer))
             {
                 var trainerUi = new TrainerUI(LoggedUser as Trainer);
-                trainerUi.MainMenu();   
+                trainerUi.MainMenu();
             }
             else
             {
@@ -38,7 +44,6 @@ namespace Main
             }
 
             StartupMenu = new Menu(MenuItemList);
-            
         }
 
         public static bool LogIn()

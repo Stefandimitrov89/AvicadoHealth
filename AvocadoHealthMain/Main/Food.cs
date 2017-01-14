@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Main.Interfaces;
 
 namespace Main
 {
-    public abstract class Food
+    public abstract class Food : IFoods
+        //Svetlomir Added inheritence of IFoods
+
     {
         public int Calories { get; set; }
         public double Fats { get; private set; }
