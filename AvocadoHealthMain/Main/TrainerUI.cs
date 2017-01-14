@@ -10,7 +10,7 @@ namespace Main
 {
     public class TrainerUI
     {
-
+        private bool ContinueToExecute = true;
         private Menu trainerMenu;
         private Trainer loggedTrainer;
 
@@ -23,7 +23,6 @@ namespace Main
             list.Add(new MenuItem() { Number = 3, MenuText = "Set Food" });
             list.Add(new MenuItem() { Number = 4, MenuText = "User Info" });
             list.Add(new MenuItem() { Number = 5, MenuText = "Show Users" });
-            list.Add(new MenuItem() { Number = 6, MenuText = "List Menu" });
             list.Add(new MenuItem() { Number = 7, MenuText = "Return To Login" });
             trainerMenu = new Menu(list);
         }
@@ -31,13 +30,11 @@ namespace Main
         public void ExecuteMenuAction(int actionNumber)
         {
             var Currentuser = ChooseUser(loggedTrainer);
-            var training = ChooseTraining(loggedTrainer);
 
             switch (actionNumber)
             {
                 case 1:
-                    Currentuser.CreateTraining(training);
-
+                    ChooseTraining();
                     break;
                 case 2:
                     SetTraining(Currentuser);
@@ -52,7 +49,7 @@ namespace Main
                     this.loggedTrainer.PrintMyTrainees();
                     break;
                 case 7:
-                    Startup.Login();
+                    ContinueToExecute = false;
                     break;
                 default: break;
             }
@@ -78,9 +75,9 @@ namespace Main
                 {
                     Console.WriteLine("Enter Valid Number");
                 }
-                if (enteredNumber > 0 && enteredNumber <= loggedTrainer.MyTrainings.Count)
+                if (enteredNumber >= 0 && enteredNumber <= loggedTrainer.MyTrainings.Count)
                 {
-                    currentUser._TrainingsList.Add((dynamic)loggedTrainer.MyTrainings[enteredNumber]);
+                    currentUser._TrainingsList.Add((loggedTrainer.MyTrainings[enteredNumber]));
                     isTrue = true;
                 }
 
@@ -88,29 +85,30 @@ namespace Main
 
         }
 
-        
-
         private void SetFood(User currentUser)
         {
             Console.WriteLine("Please enter the food to add");
-            List<IFoods> listOFFoodTypes = new List<IFoods>() { new BeanRiceAndSimilarStuff(), new BreadAndSimilar(),
+
+            List<IFood> listOFFoodTypes = new List<IFood>() { new BeanRiceAndSimilarStuff(), new BreadAndSimilar(),
             new Drinks(), new Fruits(), new JunkFood(), new Meat(),new NonAlcoBevareges(),new Vegetables(), new Water()};
+
             for (int i = 0; i < listOFFoodTypes.Count; i++)
             {
                 Console.WriteLine($"For {listOFFoodTypes[i].ToString()} enter {i}");
             }
+
             int enteredNumber = 0;
             bool isTrue = false;
-            while(!isTrue)
-            try
-            {
+            while (!isTrue)
+                try
+                {
                     enteredNumber = int.Parse(Console.ReadLine());
-            }
-            catch (Exception)
-            {
+                }
+                catch (Exception)
+                {
                     Console.WriteLine("Please Enter Valid number");
-            }
-            if (enteredNumber > 0 && enteredNumber <=9)
+                }
+            if (enteredNumber >= 0 && enteredNumber <= listOFFoodTypes.Count)
             {
                 currentUser._RecomendedFood.Add(listOFFoodTypes[enteredNumber]);
                 isTrue = true;
@@ -139,34 +137,64 @@ namespace Main
             var NewTraining = new Training(trainingName, CaloriesSpendPerMin, ProteinsSpendPerMinute, FartsSpendPerMinute, CHsSpendPerMinute);
             return NewTraining;
 
-            //TODO Impelementing new training
+
         }
 
         private User ChooseUser(Trainer trainer)
         {
-            // TODO foreach trainer.Users -> print; get user input
-
-            return new User("as", "as", "gen");
+            for (int i = 0; i < loggedTrainer.MyTrainees.Count; i++)
+            {
+                Console.WriteLine($"For user {loggedTrainer.MyTrainees[i]}, enter {i}");
+            }
+            int enteredNumber = 0;
+            bool isTrue = false;
+            while (!isTrue)
+            {
+                try
+                {
+                    enteredNumber = int.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Please Enter Valid number");
+                }
+                if (enteredNumber >= 0 && enteredNumber <= loggedTrainer.MyTrainees.Count)
+                {
+                    isTrue = true;
+                }
+            }
+            return loggedTrainer.MyTrainees[enteredNumber];
         }
 
-        private Training ChooseTraining(Trainer trainer)
+        private void ChooseTraining()
         {
-            // TODO foreach trainer.Users -> print; get user input
+            Console.WriteLine("Enter Training name");
+            string name = Console.ReadLine();
+            double callPerMin = 0;
+            double proteinsPerMin = 0;
+            double fartsPerMin = 0;
+            double carbPerMin = 0;
+            Console.WriteLine("Enter call/min");
+            callPerMin = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter proteins/min");
+            proteinsPerMin = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter fats/min");
+            fartsPerMin = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter carb/min");
+            carbPerMin = double.Parse(Console.ReadLine());
 
-            return new PowerTraining();
+            loggedTrainer.CreateTraining(name, callPerMin, proteinsPerMin, fartsPerMin, carbPerMin);
         }
+
 
         internal void MainMenu()
         {
-            while (true)
+            while (ContinueToExecute)
             {
                 int input = trainerMenu.PrintAndGetInput();
 
                 this.ExecuteMenuAction(input);
             }
         }
-
-
-
     }
 }

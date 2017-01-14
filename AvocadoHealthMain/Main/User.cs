@@ -16,7 +16,7 @@ namespace Main
         public double _MuscleMass { get; set; }
         public List<Training> _TrainingsList { get; set; }
         //Тук промених да очаква интерфейса за храна, а не конректен клас храна - Мартин
-        public List<Interfaces.IFoods> _RecomendedFood { get; set; }
+        public List<IFood> _RecomendedFood { get; set; } 
         public double _Calories { get; set; }
         public double _CarboHydrates { get; set; }
         public double _Fats { get; set; }
@@ -34,7 +34,7 @@ namespace Main
         }
 
 
-        public override void Eat(Food Food, double mass)
+        public override void Eat(IFood Food, double mass)
         {
             this._Calories += (Food.Calories * mass);
             this._Fats += (Food.Fats * mass);
@@ -57,5 +57,12 @@ namespace Main
             Console.WriteLine($"{this._FirstName} {this._LastName} is {this._Gender}. He has {this._Mass} mass index and {this._MuscleMass} muscle mass");
         }
         // Svetlomir added this Method because it is needed for TrainerUI
+        public void printTrainingList()
+        {
+            for (int i = 0; i < this._TrainingsList.Count; i++)
+            {
+                Console.WriteLine($"{this._TrainingsList[i].TrainingName}, it uses {this._TrainingsList[i].ProteinsUsedPerMinute} and takes {this._TrainingsList[i].CaloriesUsedPerMinute} call/min");
+            }
+        }
     }
 }

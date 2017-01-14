@@ -19,7 +19,7 @@ namespace Main.Interfaces
 
         void CreateTraining(string trainginName, double caloriesSpendPerMinute, double proteinsSpendPerMinute, double fatsSpendPerMinute, double carboHydratesSpendPerMinute);
 
-        void AllowUserToEat(User user, Interfaces.IFoods food);
+        void AllowUserToEat(User user, Interfaces.IFood food);
 
         void PrintMyTrainees();
 

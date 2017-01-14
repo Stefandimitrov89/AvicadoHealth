@@ -7,7 +7,7 @@ using Main.Interfaces;
 
 namespace Main
 {
-    public abstract class Food : IFoods
+    public abstract class Food : IFood
         //Svetlomir Added inheritence of IFoods
 
     {

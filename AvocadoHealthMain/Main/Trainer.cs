@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Main;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,17 +9,17 @@ namespace Main
 {
     public class Trainer :  Interfaces.IPerson
     {
-        private List<Interfaces.IPerson> myTrainees = new List<Interfaces.IPerson>();
+        private List<User> myTrainees = new List<User>();
 
         // Създавам един лист с познатите на този треньор тренировки. Логично е всички тренировки, които той знае да са запазени някъде и той да може да "бърка там" и да ги назначава на User-и
 
-        private List<Interfaces.ITrainings> myTrainings = new List<Interfaces.ITrainings>();
+        private List<Training> myTrainings = new List<Training>();
 
         public string FirstName { get; }
         public string LastName { get; }
         
         // Лист с user-ите, които тренират при този Trainer
-        public List<Interfaces.IPerson> MyTrainees
+        public List<User> MyTrainees
         {
             get
             {
@@ -27,7 +28,7 @@ namespace Main
         }
 
         //Лист с тренировките, които този Trainer знае
-        public List<Interfaces.ITrainings> MyTrainings
+        public List<Training> MyTrainings // Changed from Interface to class, because of UserUI class
         {
             get
             {
@@ -51,7 +52,8 @@ namespace Main
 
         // Трябва да се направи интерфейс за User
         // Добавяне на User към списъка с User-ите трениращи при този Trainer
-        public void AddTrainee(Interfaces.IPerson trainee)
+        public void AddTrainee(User trainee)  // Set back to User instead of IPerson, because otherwise I shoud re-write 
+            // almost whole solutiion. And there is no logic in trainer adding another trainers to its list
         {
             this.myTrainees.Add(trainee);
         }
@@ -78,7 +80,7 @@ namespace Main
         }
 
         // Задава позволени храни на дадена истанция на User
-        public void AllowUserToEat(User user, Interfaces.IFoods food)
+        public void AllowUserToEat(User user, Interfaces.IFood food)
         {
             user._RecomendedFood.Add(food);
 

@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -88,6 +89,7 @@
     <Compile Include="Foods\Vegetables.cs" />
     <Compile Include="Foods\Water.cs" />
     <Compile Include="UsernamesAndPasswords.cs" />
+    <Compile Include="UserUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Main.Interfaces
 {
-    public interface IFoods
+    public interface IFood
     {
+        int Calories { get; }
+        double Fats { get; }
+        double Proteins { get; }
+        //Svetlomir Added Properties
     }
 }
