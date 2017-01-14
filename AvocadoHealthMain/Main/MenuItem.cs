@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Main.Interfaces
+namespace Main
 {
-    public interface ITrainings
+    public class MenuItem
     {
-        void Train(User Trainee, double duration);
+        public int Number { get; set; }
+        public string MenuText { get; set; }
     }
 }

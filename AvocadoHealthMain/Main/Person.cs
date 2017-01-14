@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Main.Interfaces;
 
 namespace Main
 {
-    abstract public class Person : IPerson
+    public class Person
     {
-        public string _FirstName { get; private set; }
-        public string _LastName { get; private set; }
+        // Слагам пропъртита за имената - Мартин
+        public string _FirstName { get; protected set; }
+        public string _LastName { get; protected set; }
 
-        public Person(string firstName, string lastName)
+        public Person(string firstname, string lastname)
         {
-            this._FirstName = firstName;
-            this._LastName = lastName;
+            this._FirstName = firstname;
+            this._LastName = lastname;
         }
-
-        public abstract void Eat(object Food, int Quantity);
     }
 }

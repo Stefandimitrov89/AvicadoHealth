@@ -61,6 +61,12 @@
     <Compile Include="Foods\BeanRiceAndSimilarStuff.cs" />
     <Compile Include="Foods\BeerAndOtherGreatThingies.cs" />
     <Compile Include="Foods\BreadAndSimilar.cs" />
+    <Compile Include="Interfaces\ILogIn.cs" />
+    <Compile Include="Interfaces\ITrainer.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="TrainerUI.cs" />
     <Compile Include="Trainings\CardioTraining.cs" />
     <Compile Include="Foods\Drinks.cs" />
     <Compile Include="Food.cs" />
@@ -72,7 +78,6 @@
     <Compile Include="Login.cs" />
     <Compile Include="Foods\Meat.cs" />
     <Compile Include="Foods\NonAlcoBevareges.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Trainings\PowerTraining.cs" />
     <Compile Include="ReadWrite.cs" />
     <Compile Include="Startup.cs" />
@@ -82,6 +87,7 @@
     <Compile Include="User.cs" />
     <Compile Include="Foods\Vegetables.cs" />
     <Compile Include="Foods\Water.cs" />
+    <Compile Include="UsernamesAndPasswords.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
