@@ -16,3 +16,9 @@ C:\Users\Ivi\Documents\GitHub\AvicadoHealth\AvicadoHealth\AvocadoHealthMain\Main
 C:\Users\mkanovsk\Documents\AvocadoHealth\master\AvocadoHealthMain\Main\obj\Debug\Main.csprojResolveAssemblyReference.cache
 C:\Users\mkanovsk\Documents\AvocadoHealth\master\AvocadoHealthMain\Main\bin\Debug\Main.exe
 C:\Users\mkanovsk\Documents\AvocadoHealth\master\AvocadoHealthMain\Main\bin\Debug\Main.pdb
+C:\Users\Ivi\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\bin\Debug\Main.exe.config
+C:\Users\Ivi\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\bin\Debug\Main.exe
+C:\Users\Ivi\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\bin\Debug\Main.pdb
+C:\Users\Ivi\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.csprojResolveAssemblyReference.cache
+C:\Users\Ivi\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.exe
+C:\Users\Ivi\Documents\GitHub\AvicadoHealth\AvocadoHealthMain\Main\obj\Debug\Main.pdb

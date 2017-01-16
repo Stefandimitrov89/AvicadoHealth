@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Main.Enums;
 
 namespace Main
 {
@@ -15,25 +16,20 @@ namespace Main
 
         static void Main()
         {
-            /*bool isLogged = false;
-            do
-            {
-                isLogged = LogIn();
-            } while (!isLogged);*/
             Login();
 
         }
 
         public static void Login()
         {
-            Console.WriteLine("Please, enter your username:");
+            Console.WriteLine("Please, enter your credentials:");
             Login login = new Login();
 
             var loggedUser = login.LogIn();
 
             List<MenuItem> MenuItemList = new List<MenuItem>();
 
-            if (loggedUser == typeof(Trainer))
+            if (loggedUser.Equals(UserType.Trainer ))
             {
                 var trainerUi = new TrainerUI(LoggedUser as Trainer);
                 trainerUi.MainMenu();
@@ -41,6 +37,7 @@ namespace Main
             else
             {
                 // TODO Fill List of MenuItems for user
+                Console.WriteLine("test");
             }
 
             StartupMenu = new Menu(MenuItemList);
@@ -52,14 +49,6 @@ namespace Main
             string userName = Console.ReadLine();
             Console.WriteLine("Enter Your Password");
             string password = Console.ReadLine();
-
-
-
-            // Isi is here
-            //if (true)
-            //{
-            // LoggedUser = ... 
-            //}
 
             return true;
 

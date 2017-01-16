@@ -12,6 +12,6 @@ namespace Main.Interfaces
         string Password { get; }
         Dictionary<string, string> UsersList { get; }
         Dictionary<string, string> TrainersList { get; }
-        Type LogIn();
+        Enum LogIn();
     }
 }

@@ -3,7 +3,7 @@
     using Main.Interfaces;
     using System;
     using System.Collections.Generic;
-
+    using Main.Enums;
 
     class Login : ILogIn
     {
@@ -20,7 +20,8 @@
             this.UsersList = obj.AddCredentialsToUsers();
             this.TrainersList = obj.AddCredentialsToTrainers();
             //Asks for credentials until they are valid
-            while (this.UsersList.ContainsKey(this.Username) == false || this.UsersList[this.Username].Contains(this.Password) == false)
+            while ((this.UsersList.ContainsKey(this.Username) == false || this.UsersList[this.Username].Contains(this.Password) == false)
+                    && (this.TrainersList.ContainsKey(this.Username) == false || this.TrainersList[this.Username].Contains(this.Password) == false))
             {
                 Console.WriteLine("Invalid input! Please, try again: ");
                 this.Username = Console.ReadLine();
@@ -33,19 +34,19 @@
         public Dictionary<string, string> UsersList { get; }
         public Dictionary<string, string> TrainersList { get; }
 
-        public Type LogIn()
+        public Enum LogIn()
         {
             if (this.UsersList.ContainsKey(this.Username))
             {
                 if (this.UsersList[this.Username].Contains(this.Password))
                 {
-                    return typeof(Trainer);
+                    return UserType.User;
                 }
 
                 else
                 {
                     Console.WriteLine("Wrong password!");
-                    return typeof(Person);
+                    return UserType.Invalid;
                 }
             }
 
@@ -53,19 +54,21 @@
             {
                 if (this.TrainersList[this.Username].Contains(this.Password))
                 {
-                    return typeof(User);
+                    return UserType.Trainer;
+                    
                 }
 
                 else
                 {
                     Console.WriteLine("Wrong password!");
-                    return typeof(Person);
+                    return UserType.Invalid;
                 }
             }
             else
             {
                 Console.WriteLine("You are not registered!");
-                return typeof(Person);
+                return UserType.Trainer;
+
             }
         }
     }
