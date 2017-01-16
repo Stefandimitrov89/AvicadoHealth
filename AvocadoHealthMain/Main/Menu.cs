@@ -28,7 +28,7 @@ namespace Main
             int result = -1;
             do
             {
-                result = (int)Console.ReadKey(true).KeyChar - '0'; // MAKE exception safe
+                result = int.Parse(Console.ReadLine()); // MAKE exception safe
                 // TODO validate if int in menu
             } while (result < 0);
 

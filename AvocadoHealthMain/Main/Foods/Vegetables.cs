@@ -13,13 +13,12 @@ namespace Main
         {
             get
             {
-                throw new NotImplementedException();
+                return Calories;
             }
 
             set
             {
-                throw new NotImplementedException();
+                Calories = value;
             }
         }
-    }
 }

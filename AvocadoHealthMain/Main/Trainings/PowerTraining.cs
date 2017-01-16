@@ -17,7 +17,7 @@ namespace Main
             this.CarboHydratesUsedPerMinute = carboHydratesSpendPerMinute;
         }
 
-        public double MuscleMassBuildingPerMinute { get; private set; }
+        public double MuscleMassBuildingPerMinute { get { return CaloriesUsedPerMinute / 10; } private set { MassLostPerMinute = value; } }
 
         public override void Train(User trainee, double duration)
         {
