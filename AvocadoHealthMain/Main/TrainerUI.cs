@@ -25,6 +25,7 @@ namespace Main
             list.Add(new MenuItem() { Number = 5, MenuText = "Show Users" });
             list.Add(new MenuItem() { Number = 7, MenuText = "Return To Login" });
             trainerMenu = new Menu(list);
+            this.loggedTrainer = loggedTrainer; // добавих това за да този фиилд се инициализира с истанция на Trainer - Мартин
         }
 
         public void ExecuteMenuAction(int actionNumber)

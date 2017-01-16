@@ -34,7 +34,7 @@ namespace Main
         }
 
 
-        public override void Eat(IFood Food, double mass)
+        public void Eat(IFood Food, double mass)
         {
             this._Calories += (Food.Calories * mass);
             this._Fats += (Food.Fats * mass);
@@ -47,7 +47,7 @@ namespace Main
             throw new NotImplementedException();
         }
 
-        public override void Train(Training training, double duration)
+        public void Train(Training training, double duration)
         {
             training.Train(this, duration);
         }

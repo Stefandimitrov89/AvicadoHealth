@@ -8,7 +8,8 @@ namespace Main
 {
     class Meat : Food
     {
-        public override int Calories
+        //Смених начина на скриване на родителското пропърти от override към new
+        public new int Calories
         {
             get
             {

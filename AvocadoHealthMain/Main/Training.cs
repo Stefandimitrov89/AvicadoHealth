@@ -9,14 +9,14 @@ namespace Main
 {
     public class Training : ITrainings
     {
-        public string TrainingName { get; private set; }
+        public string TrainingName { get; protected set; }
 
         // Тези дали да не са int-ове. Не изпадаме ли в излишен детайл да са double-и? - Мартин
 
-        public double CaloriesUsedPerMinute { get; private set; }
-        public double ProteinsUsedPerMinute { get; private set; }
-        public double FatsUsedPerMinute { get; private set; }
-        public double CarboHydratesUsedPerMinute {get; private set; }
+        public double CaloriesUsedPerMinute { get; protected set; }
+        public double ProteinsUsedPerMinute { get; protected set; }
+        public double FatsUsedPerMinute { get; protected set; }
+        public double CarboHydratesUsedPerMinute {get; protected set; }
 
         // Правя един конструктор, за да мога да инстанцирам тренировка с Trainer - Мартин
 

@@ -40,7 +40,7 @@ namespace Main
         {
         }
 
-        public void Eat(Food Food, double mass)
+        public void Eat(Interfaces.IFood Food, double mass)
         {
             throw new NotImplementedException();
         }
@@ -67,14 +67,14 @@ namespace Main
         //Създаване на тренировка от Trainer
         public void CreateTraining(string trainginName, double caloriesSpendPerMinute, double proteinsSpendPerMinute, double fatsSpendPerMinute, double carboHydratesSpendPerMinute)
         {
-            Interfaces.ITrainings training = new Training(trainginName, caloriesSpendPerMinute, proteinsSpendPerMinute, fatsSpendPerMinute, carboHydratesSpendPerMinute);
+            Training training = new Training(trainginName, caloriesSpendPerMinute, proteinsSpendPerMinute, fatsSpendPerMinute, carboHydratesSpendPerMinute);
 
             this.AddTrainingToMyList(training);
 
         }
 
         // Вътрешен метод да прибавя тренировка към познатите му тренировки
-        private void AddTrainingToMyList(Interfaces.ITrainings training)
+        private void AddTrainingToMyList(Training training)
         {
             this.myTrainings.Add(training);
         }
